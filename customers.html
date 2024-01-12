@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Dashboard</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link href="./css/globalStyles.css" rel="stylesheet" />
+		<link href="./css/mobile.css" rel="stylesheet" />
+		<link href="./css/tablet.css" rel="stylesheet" />
+		<link href="./css/desktop.css" rel="stylesheet" />
+	</head>
+	<body class="container">
+		<!-- Nav Section -->
+		<header class="header__container">
+			<nav class="nav__container">
+				<a class="nav__logo link" href="./index.html">
+					<svg class="nav__icon logo">
+						<use href="./images/svg/sprite.svg#icon-logo__dashboard"></use></svg
+					><span class="first__part__logo">Dashboard</span><span class="second__part__logo">v.01</span></a
+				>
+
+				<a href="./index.html" class="nav__item link" data-text="Dashboard">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-dashboard"></use></svg
+					><span class="nav__text">Dashboard</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+				<a href="#" class="nav__item link" data-text="Product">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-product"></use></svg
+					><span class="nav__text">Product</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+				<a href="./customers.html" class="nav__item current link" data-text="Customers">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-customers"></use></svg
+					><span class="nav__text">Customers</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+				<a href="#" class="nav__item link" data-text="Income">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-wallet__money"></use></svg
+					><span class="nav__text">Income</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+				<a href="#" class="nav__item link" data-text="Promote">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-promote"></use></svg
+					><span class="nav__text">Promote</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+				<a href="#" class="nav__item link" data-text="Help">
+					<svg class="nav__icon">
+						<use href="./images/svg/sprite.svg#icon-help"></use></svg
+					><span class="nav__text">Help</span
+					><svg class="nav__icon arrow">
+						<use href="./images/svg/sprite.svg#icon-arrow__right"></use>
+					</svg>
+				</a>
+			</nav>
+			<div class="user">
+				<img src="./images/user__avatar.png" alt="user avatar" class="user__img" width="37" />
+				<div>
+					<h3 class="user__name"> Evano </h3>
+				<p class="user__profession"> Project Manager </p>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<h1 class="user__name__title">Hello Evano 👋🏼,</h1>
+
+			<!-- Customers Section -->
+			<section class="section">
+				<div class="customers__container">
+					<div class="customers__header">
+						<div>
+							<h2 class="customers__title">All Customers</h2>
+							<h3 class="customers__status__members">Active Members</h3>
+						</div>
+						<div class="tb__search">
+							
+							<input
+								type="text"
+								id="search__name"
+								onkeyup="filterByName()"
+								placeholder="Search"
+								class="form__control"
+							/>
+							<svg class="icon__search">
+								<use href="./images/svg/sprite.svg#icon-search"></use>
+							</svg>
+						</div>
+					</div>
+
+					<table class="customers__table">
+						<thead>
+							<tr>
+								<th class="header__table name">Customer Name</th>
+								<th class="header__table">Company</th>
+								<th class="header__table phone">Phone Number</th>
+								<th class="header__table email">Email</th>
+								<th class="header__table">Country</th>
+								<th class="header__table status">Status</th>
+							</tr>
+						</thead>
+
+						<tbody id="customersTableBody"> </tbody>
+					</table>
+					<div class="customers__footer">
+						<div id="dataRange"></div>
+						<ul id="pagination" class="pagination"></ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/navCurrent.js"></script>
+		<script src="./js/customerScript.js"></script>
+	</body>
+</html>

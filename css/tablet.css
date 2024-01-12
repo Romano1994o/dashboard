@@ -1,0 +1,146 @@
+
+
+@media screen and (max-width: 1439px) {
+	.info__data {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.info__data:hover {
+		white-space: normal;
+		position: absolute;
+		z-index: 1;
+		padding: 3px 1px 1px 1px;
+		border-radius: 4px;
+		border: 1px solid var(--table-border-color);
+		background: var(--primary-bg-color);
+		box-shadow: var(--box-shadow);
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.header__container .user{
+		margin-top: auto;
+		margin-bottom: 60px;
+		
+	}
+	.user__name__title {
+		margin-top: 25px;
+		font-size: 20px;
+	}
+
+	.customers__container {
+		padding: 30px 20px;
+	}
+
+	.customers__header {
+		justify-content: space-between;
+		align-items: stretch;
+		padding-bottom: 30px;
+		gap: 20px;
+		
+	}
+
+	.customers__header .tb__search{
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.tb__search {
+		width: 166px;
+	}
+
+	.form__control {
+		color: var(	--table-header-font-color);
+		font-size: 10px;
+		padding: 8px 6px;
+		padding-left: 36px;
+	}
+
+	.icon__search {
+		position: absolute;
+		top: 10px;
+		left: 8px;
+		transform: translateY(-25%);
+		width: 20px;
+		height: 20px;
+	}
+
+	.customers__title {
+		margin-bottom: 7px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	.customers__status__members {
+		color: var(--active-members-font-color);
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.customers__table td {
+		padding: 12px;
+		font-size: 12px;
+	}
+
+	.header__table {
+		padding: 0 12px 12px 12px;
+		font-size: 12px;
+	}
+	.name {
+		min-width: 113px;
+	}
+
+	.phone {
+		min-width: 115px;
+	}
+
+	.email {
+		min-width: 115px;
+	}
+
+	.customers__status {
+		font-size: 10px;
+	}
+
+	.status__inactive {
+		padding: 3px 9px;
+	}
+	.status__active {
+		padding: 3px 14px;
+	}
+	.customers__footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.customers__footer #pagination{
+		margin-right: 0;
+	}
+	
+	#dataRange {
+		font-size: 12px;
+	}
+	#pagination {
+		font-size: 10px;
+	}
+
+	#pagination li {
+		width: 22px;
+		height: 20px;
+		margin-right: 10px;
+	}
+
+	#pagination .pagination-ellipsis-prev,
+	#pagination .pagination-ellipsis-next {
+		margin-right: 10px;
+	}
+
+	#pagination .pagination-ellipsis-prev:after,
+	#pagination .pagination-ellipsis-next:after {
+		font-size: 10px;
+	}
+}
+

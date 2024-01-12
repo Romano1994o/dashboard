@@ -1,0 +1,124 @@
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+:after {
+	content: "";
+}
+
+:root {
+	--primary-bg-color: #ffffff;
+	--primary-font-color: #292d32;
+	--box-shadow: 0px 10px 60px rgba(225.83, 236.19, 248.63, 0.50);
+	--nav-font-color: #9197b3;
+	--hover-bg-color: #5932ea;
+	--hover-font-color: #ffffff;
+	--logo-second-part-font-color: #838383;
+	--secondary-font-color: #000000;
+	--secondary-bg-color: #fafbff;
+	--profesion-font-color: #757575;
+	--active-members-font-color: #16c098;
+	--table-border-color: #eeeeee;
+	--table-header-font-color: #b5b7c0;
+	--inactive-status-font-color: #df0404;
+	--inactive-status-bg-color: #ffc5c5;
+	--active-status-font-color: #008767;
+	--active-status-border-color: #00b087;
+	--active-status-bg-color: #16c09861;
+	--pagination-font-color: #404b52;
+	--search-fill-icon: #7e7e7e;
+	--search-bg-color: #f9fbff;
+	
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--primary-font-color);
+	background-color: var(--primary-bg-color);
+	display: flex;
+	flex-direction: row;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+.link {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+	margin: 0;
+}
+
+.section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.section {
+		padding-top: 40px;
+		padding-bottom: 70px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.section {
+		padding-top: 50px;
+		padding-bottom:70px;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	gap: 10px;
+}
+
+@media screen and (min-width:375px) {
+	.container {
+		max-width: 355px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 728px;
+		gap: 20px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		max-width: 1298px;
+		gap: 71px;
+	}
+}
