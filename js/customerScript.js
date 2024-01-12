@@ -200,12 +200,7 @@ function updatePagination(currentPage, totalPages) {
     const ellipsisItem = document.createElement("li");
     ellipsisItem.classList.add("pagination-ellipsis-prev");
     ellipsisItem.textContent = "...";
-
-    if (goingForward) {
-      pagination.appendChild(ellipsisItem);
-    } else {
-      pagination.insertBefore(ellipsisItem, pagination.firstChild);
-    }
+    pagination.appendChild(ellipsisItem);
   };
 
   const addArrow = (arrowType, disabled) => {
@@ -244,13 +239,13 @@ function updatePagination(currentPage, totalPages) {
     } else if (currentPage >= totalPages - 3) {
       createPageItem(1, currentPage === 1);
       addEllipsis();
-      for (let i = totalPages - 3; i <= totalPages; i++) {
+      for (let i = totalPages - 4; i <= totalPages; i++) {
         createPageItem(i, currentPage === i);
       }
     } else {
       createPageItem(1, currentPage === 1);
       addEllipsis();
-      for (let i = currentPage - 1; i <= currentPage + 2; i++) {
+      for (let i = currentPage - 2; i <= currentPage + 2; i++) {
         createPageItem(i, currentPage === i);
       }
       addEllipsis();
