@@ -39,6 +39,7 @@
 
 body {
 	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
 	font-weight: 500;
 	font-size: 14px;
 	color: var(--primary-font-color);

@@ -6,7 +6,7 @@
 	box-shadow: var(--box-shadow);
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	transition: all 0.4s var(--timing-function);
 }
 
